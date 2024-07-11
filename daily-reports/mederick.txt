@@ -1,0 +1,5 @@
+Day 01 (10/07)
+- created and set up github
+
+Day 02 (11/07)
+- working on E/R diagram and data model for initial workflow submission

@@ -1,0 +1,6 @@
+Day 01 (10/07)
+- basic Github setup
+- adding everyone as contributors
+
+Day 02 (11/07)
+- divided work for initial workflow submission
