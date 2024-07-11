@@ -1,0 +1,4 @@
+ER Diagram
+- designed based on project instructions and prior knowledge of to do lists
+- the original version simply had users and tasks, but adding lists in between gives more flexibility and allows users to have multiple lists
+- conceived of in 3NF to begin with, normalization only used to verify work
