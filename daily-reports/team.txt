@@ -4,3 +4,6 @@ Day 01 (10/07)
 
 Day 02 (11/07)
 - divided work for initial workflow submission
+
+Day 03 (12/07) To Day 05 (14/07)
+- Work out Html and Css for List Website

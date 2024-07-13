@@ -3,3 +3,6 @@ Day 01 (10/07)
 
 Day 02 (11/07)
 - working on Plain Text Document and Wireframe for initial workflow submission
+
+Day 03 (12/07)
+- Add a Home Page Html And Css Files
