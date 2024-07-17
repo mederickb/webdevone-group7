@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Imprima&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 body {
     font-family: "Inria Sans", sans-serif;
@@ -164,9 +165,8 @@ footer, .home-btn {
 
 .auth-container, .profile-container {
     background-color: #fff; 
-    border-radius: 10px;
     padding: 100px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
     width: 50%;
 }
 
@@ -176,20 +176,20 @@ footer, .home-btn {
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #000;
+    border-radius: 10px;
     box-sizing: border-box;
 }
 
 .name-fields {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .name-fields input {
-    width: 50%;
+    width: 100%;
 }
 
 .btn {
@@ -198,7 +198,6 @@ input {
     border: none;
     border-radius: 20px;
     color: #fff;
-    font-size: 16px;
     cursor: pointer;
 }
 
@@ -211,10 +210,17 @@ input {
     color: #000;
 }
 
+::placeholder, .btn-primary, .btn-secondary{
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+
 hr {
     margin: 20px 0;
     border: none;
-    border-top: 1px solid #eee;
+    border-top: 3px solid #f0f0f0;
 }
 
 .profile-picture {
@@ -224,10 +230,10 @@ hr {
 }
 
 .profile-picture img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 30px;
 }
 
 .profile-picture .btn {
@@ -241,8 +247,99 @@ h2 {
 .button-group {
     display: flex;
     gap: 10px;
+    margin-left: 200px;
 }
 
 .button-group .btn {
     width: 50%;
+}
+
+/*
+*
+*/
+.new-task, .updating-task {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;  
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+  
+h2 {
+    margin-top: 0;
+    font-size: 32px;
+    margin-top: 100px;
+}
+  
+.task-input {
+    width: 100%;
+    padding: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+.task-input::placeholder {
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    font-size: 24px;
+    color: #d9d9d9;
+    line-height: 1;
+}
+  
+.date-time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+  
+.date-field, .time-field {
+    width: 48%;
+}
+  
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+  
+input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type="date"] {
+    position: relative;
+}
+  
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+.save-btn, .update-btn {
+    display: block;
+    width: 100px;
+    padding: 5px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: auto;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+  
+.save-btn:hover, .update-btn:hover, .btn-primary:hover {
+    background-color: #2980b9;
 }
