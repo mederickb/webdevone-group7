@@ -3,3 +3,15 @@ Day 01 (10/07)
 
 Day 02 (11/07)
 - working on E/R diagram and data model for initial workflow submission
+
+Days 03-06 (12/07-15/07)
+- Busy
+
+Day 07 (16/07)
+- SQL for tables
+
+Day 08 (17/07)
+- Started work on database setup
+
+Day 09 (18/07)
+- Working on database setup
