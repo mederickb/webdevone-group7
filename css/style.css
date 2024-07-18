@@ -153,7 +153,7 @@ nav a {
     margin-bottom: 10px;
 }
 
-footer, .home-btn {
+footer, .home-btn, h1 {
     font-family: "Imprima", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -170,7 +170,7 @@ footer, .home-btn {
     width: 50%;
 }
 
-.login-form, .profile-form{
+.login-form, .profile-form {
     margin-top: 50px;
 }
 
@@ -183,12 +183,13 @@ input {
     box-sizing: border-box;
 }
 
-.name-fields {
+.name-fields, .form-field {
     display: flex;
     gap: 20px;
 }
 
-.name-fields input {
+.name-fields input, input[type="email"],
+textarea {
     width: 100%;
 }
 
@@ -257,7 +258,7 @@ h2 {
 /*
 *
 */
-.new-task, .updating-task {
+.new-task, .updating-task, .form-container {
     width: 50%;
     padding: 20px;
     box-sizing: border-box;  
@@ -324,11 +325,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transform: translateY(-50%);
 }
   
-.save-btn, .update-btn {
+.save-btn, .update-btn, button {
     display: block;
     width: 100px;
     padding: 5px;
-    background-color: #3498db;
+    background-color: #54a6e1;
     color: white;
     border: none;
     border-radius: 20px;
@@ -340,6 +341,61 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 24px;
 }
   
-.save-btn:hover, .update-btn:hover, .btn-primary:hover {
+.save-btn:hover, .update-btn:hover, .btn-primary:hover, button:hover {
     background-color: #2980b9;
 }
+
+/*
+*
+*/
+  
+.form-field {
+    margin-bottom: 20px;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+  
+textarea {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    vertical-align: top;
+    line-height: 1.2;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.contact-form {
+    padding: 50px;
+    margin-top: 100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+.member-icon {
+    width: 150px;
+    height: 120px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.member-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
