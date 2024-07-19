@@ -1,6 +1,8 @@
-document.querySelector('.list-task').addEventListener('click', function() {
-    const items = document.querySelectorAll('.list-item');
-    items.forEach(item => {
-        item.style.display = item.style.display === 'none' ? 'block' : 'none';
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const listContainer = document.querySelector(".list-container");
+
+    menuToggle.addEventListener("click", function() {
+        listContainer.classList.toggle("show");
     });
 });

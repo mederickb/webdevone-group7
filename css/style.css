@@ -142,7 +142,7 @@ nav a {
     padding-left: 10PX;
 }
 
-.text-login{
+.text-login, .addnew{
     text-decoration: none;
     color: inherit;
 }
@@ -156,6 +156,14 @@ nav a {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+}
+
+.list-container {
+    display: none;
+}
+
+.list-container.show {
+    display: block;
 }
 
 footer, .home-btn, h1 {
