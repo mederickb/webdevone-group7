@@ -100,11 +100,16 @@ footer p {
 nav a {
     color: #f0f0f0;
     text-decoration: none;
+    margin-right: 20px;
 }
 
 .social-icons a {
     font-size: 16px;
     margin: 0 5px;
+}
+
+.social-icons {
+    margin-right: 20px;
 }
 
 .home-btn {
