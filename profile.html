@@ -13,7 +13,7 @@
         </div>
         <nav>
             <div class="nav-content">
-                <img width="48" height="48" src="https://img.icons8.com/windows/32/home.png" alt="home"/>
+                <a href="index.html"><img width="48" height="48" src="https://img.icons8.com/windows/32/home.png" alt="home"/></a>
                 <a href="index.html" class="home-btn">Home</a>
             </div>
         </nav>
@@ -27,7 +27,7 @@
                     <img src="img/profile.jpg" alt="User Profile">
                 </div>
                 <div class="user-login">
-                    Login<span class="edit-icon"><img width="30" height="30" src="https://img.icons8.com/wired/64/edit.png" alt="edit"/></span>
+                    <a href="login.html" class="text-login">Login</a><span class="edit-icon"><a href="profile.html"><img width="30" height="30" src="https://img.icons8.com/wired/64/edit.png" alt="edit"/></a></span>
                 </div>
             </div>
             <h3>MY LISTS<span><img width="30" height="30" src="https://img.icons8.com/ios-filled/50/search--v1.png" alt="search--v1"/></span></h3>
@@ -39,22 +39,24 @@
         </aside>
 
         <div class="profile-container">
-            <h2>My Profile</h2>
-            <div class="profile-picture">
-                <img src="img/profile.jpg" alt="Profile Picture">
-                <button class="btn btn-primary">Upload</button>
+            <div class="profile">
+                <h2>My Profile</h2>
+                <div class="profile-picture">
+                    <img src="img/profile.jpg" alt="Profile Picture">
+                    <button class="btn btn-upload">Upload</button>
+                </div>
+                <form class="profile-form">
+                    <div class="name-fields">
+                        <input type="text" placeholder="FirstName" required>
+                        <input type="text" placeholder="LastName" required>
+                    </div>
+                    <input type="password" placeholder="New Password">
+                    <div class="button-group">
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
             </div>
-            <form class="profile-form">
-                <div class="name-fields">
-                    <input type="text" placeholder="FirstName" required>
-                    <input type="text" placeholder="LastName" required>
-                </div>
-                <input type="password" placeholder="New Password">
-                <div class="button-group">
-                    <button type="button" class="btn btn-secondary">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
-            </form>
         </div>
 
     </main>
@@ -62,7 +64,7 @@
     <footer>
         <p>©2024 LIST. All rights reserved.</p>
         <nav>
-            <a href="#">Contact Us</a>
+            <a href="Contactus.html">Contact Us</a>
             <div class="social-icons">
                 <a href="#"><img width="30" height="30" src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"/></a>
                 <a href="#"><img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/twitter.png" alt="Twitter"/></a>
