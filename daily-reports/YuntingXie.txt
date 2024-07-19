@@ -11,3 +11,14 @@ Day 04-05 (13/07-14/07)
 - Updated style.css to make Home page look like the wireframe design
 
 Day 06 (15/07)
+- created login.html & profile.html 
+
+Day 07 (16/07)
+- created new & updating form
+
+Day 08 (18/07)
+- add contactus.html
+
+Day 09 (17/07)
+- adjusted the css file to make them look better
+- Add a js file
