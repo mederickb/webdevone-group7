@@ -12,11 +12,7 @@ composer.phar
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # Additions to template
-.idea/.gitignore
-.idea/modules.xml
-.idea/php.xml
-.idea/vcs.xml
-.idea/webdevone-group7.iml
+.idea/
 
 # User-specific stuff
 .idea/**/workspace.xml
