@@ -15,3 +15,7 @@ Day 08 (17/07)
 
 Day 09 (18/07)
 - Working on database setup
+
+Day 10 (19/07)
+- Still working on database stuff, cannot get connection to work, I've tried everything and keep getting errors with the php pdo mysql library
+- Will have to submit as-is for mid-project if cannot find solution
