@@ -6,3 +6,8 @@ Day 02 (11/07)
 
 Day 03 (12/07)
 - Add a Home Page Html And Css Files
+
+Day 04-05 (13/07-14/07)
+- Updated style.css to make Home page look like the wireframe design
+
+Day 06 (15/07)
