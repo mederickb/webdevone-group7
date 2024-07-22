@@ -2,24 +2,24 @@
     <aside class="sidebar">
         <div class="user-section">
             <div class="user-icon">
-                <img src="{{ @BASE }}/img/profile.jpg" alt="User Profile">
+                <img src="<?= ($BASE) ?>/img/profile.jpg" alt="User Profile">
             </div>
             <div class="user-login">
-                <a href="{{ @BASE }}/login" class="text-login">Login</a><span class="edit-icon"><a href="{{ @BASE }}/profile"><img width="30" height="30" src="https://img.icons8.com/wired/64/edit.png" alt="edit"/></a></span>
+                <a href="<?= ($BASE) ?>/login" class="text-login">Login</a><span class="edit-icon"><a href="<?= ($BASE) ?>/profile"><img width="30" height="30" src="https://img.icons8.com/wired/64/edit.png" alt="edit"/></a></span>
             </div>
         </div>
         <h3>MY LISTS<span><img width="30" height="30" src="https://img.icons8.com/ios-filled/50/search--v1.png" alt="search--v1"/></span></h3>
         <div class="list-task">All Tasks <span class="menu-toggle">≡</span></div>
         <div>
-            <div class="list-item">ToDo <a href="{{ @BASE }}/new" class="addnew">+</a></div>
-            <div class="list-item">Done <a href="{{ @BASE }}/new" class="addnew">+</a></div>
-            <div class="list-item">Overdue Task <a href="{{ @BASE }}/new" class="addnew">+</a></div>
-            <div class="list-item">Important! <a href="{{ @BASE }}/new" class="addnew">+</a></div>
+            <div class="list-item">ToDo <a href="<?= ($BASE) ?>/new" class="addnew">+</a></div>
+            <div class="list-item">Done <a href="<?= ($BASE) ?>/new" class="addnew">+</a></div>
+            <div class="list-item">Overdue Task <a href="<?= ($BASE) ?>/new" class="addnew">+</a></div>
+            <div class="list-item">Important! <a href="<?= ($BASE) ?>/new" class="addnew">+</a></div>
         </div>
     </aside>
     <div class="new-task">
         <h2>New Task</h2>
-        <form action="{{ @BASE }}/save-task" method="post">
+        <form action="<?= ($BASE) ?>/save-task" method="post">
             <input type="text" class="task-input" name="task" placeholder="Enter new task" required>
             <div class="date-time">
               <div class="date-field">

@@ -4,7 +4,7 @@
         <div class="team-container">
             <div class="team-member">
                 <div class="member-icon">
-                    <img src="{{ @BASE }}/img/profile.jpg" alt="Member Profile">
+                    <img src="<?= ($BASE) ?>/img/profile.jpg" alt="Member Profile">
                 </div>
                 <div class="info">
                     <h2>Team Member 1</h2>
@@ -14,7 +14,7 @@
             </div>
             <div class="team-member">
                 <div class="member-icon">
-                    <img src="{{ @BASE }}/img/profile.jpg" alt="Member Profile">
+                    <img src="<?= ($BASE) ?>/img/profile.jpg" alt="Member Profile">
                 </div>
                 <div class="info">
                     <h2>Team Member 2</h2>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="form-container">
-        <form class="contact-form" action="{{ @BASE }}/submit-contact" method="post">
+        <form class="contact-form" action="<?= ($BASE) ?>/submit-contact" method="post">
           <div class="name-fields">
             <input type="text" name="firstName" placeholder="FirstName" required>
             <input type="text" name="lastName" placeholder="LastName" required>

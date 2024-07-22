@@ -5,7 +5,7 @@ require 'vendor/autoload.php';
 // Instantiate the framework
 $f3 = Base::instance();
 
-// Load configuration (optional, but recommended)
+// Load configuration 
 $f3->config('config.ini');
 
 // Load routes

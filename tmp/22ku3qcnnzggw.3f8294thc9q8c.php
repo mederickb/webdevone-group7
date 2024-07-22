@@ -1,7 +1,7 @@
 <footer>
     <p>©2024 LIST. All rights reserved.</p>
     <nav>
-        <a href="{{ @BASE }}/contactus">Contact Us</a>
+        <a href="<?= ($BASE) ?>/contactus">Contact Us</a>
         <div class="social-icons">
             <a href="#"><img width="30" height="30" src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"/></a>
             <a href="#"><img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/twitter.png" alt="Twitter"/></a>
@@ -9,6 +9,6 @@
         </div>
     </nav>
 </footer>
-<script src="{{ @BASE }}/js/script.js"></script>
+<script src="<?= ($BASE) ?>/js/script.js"></script>
 </body>
 </html>

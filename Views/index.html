@@ -1,64 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIST - ToDo Task Manager</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="img/Logo.png" alt="LIST logo">
+<main>
+    <aside class="sidebar">
+        <div class="user-section">
+            <div class="user-icon">
+                <img src="{{ @BASE }}/img/profile.jpg" alt="User Profile">
+            </div>
+            <div class="user-login">
+                <a href="{{ @BASE }}/login" class="text-login">Login</a><span class="edit-icon"><a href="{{ @BASE }}/profile"><img width="30" height="30" src="https://img.icons8.com/wired/64/edit.png" alt="edit"/></a></span>
+            </div>
         </div>
-        <nav>
-            <div class="nav-content">
-                <a href="index.html"><img width="48" height="48" src="https://img.icons8.com/windows/32/home.png" alt="home"/></a>
-                <a href="index.html" class="home-btn">Home</a>
-            </div>
-        </nav>
-    </header>
+        <h3>MY LISTS<span><img width="30" height="30" src="https://img.icons8.com/ios-filled/50/search--v1.png" alt="search--v1"/></span></h3>
+        <div class="list-task">All Tasks <span class="menu-toggle">≡</span></div>
+        <div class="list-container">
+            <div class="list-item">ToDo <a href="{{ @BASE }}/new" class="addnew">+</a></div>
+            <div class="list-item">Done <a href="{{ @BASE }}/new" class="addnew">+</a></div>
+            <div class="list-item">Overdue Task <a href="{{ @BASE }}/new" class="addnew">+</a></div>
+            <div class="list-item">Important! <a href="{{ @BASE }}/new" class="addnew">+</a></div>
+        </div>
+    </aside>
     
-    <hr class="header-separator">
-
-    <main>
-        <aside class="sidebar">
-            <div class="user-section">
-                <div class="user-icon">
-                    <img src="img/profile.jpg" alt="User Profile">
-                </div>
-                <div class="user-login">
-                    <a href="login.html" class="text-login">Login</a><span class="edit-icon"><a href="profile.html"><img width="30" height="30" src="https://img.icons8.com/wired/64/edit.png" alt="edit"/></a></span>
-                </div>
-            </div>
-            <h3>MY LISTS<span><img width="30" height="30" src="https://img.icons8.com/ios-filled/50/search--v1.png" alt="search--v1"/></span></h3>
-            <div class="list-task">All Tasks <span class="menu-toggle">≡</span></div>
-            <div class="list-container">
-                <div class="list-item">ToDo <a href="new.html" class="addnew">+</a></div>
-                <div class="list-item">Done <a href="new.html" class="addnew">+</a></div>
-                <div class="list-item">Overdue Task <a href="new.html" class="addnew">+</a></div>
-                <div class="list-item">Important! <a href="new.html" class="addnew">+</a></div>
-            </div>
-        </aside>
-
-        <section class="main-content">
-            <div class="main-background">
-                <img src="img/background.jpg" alt="User Profile">
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>©2024 LIST. All rights reserved.</p>
-        <nav>
-            <a href="contactus.html">Contact Us</a>
-            <div class="social-icons">
-                <a href="#"><img width="30" height="30" src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"/></a>
-                <a href="#"><img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/twitter.png" alt="Twitter"/></a>
-                <a href="#"><img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/instagram-new.png" alt="Instagram"/></a>
-            </div>
-        </nav>
-    </footer>
-    <script src="js/script.js"></script>
-</body>
-</html>
+    <section class="main-content">
+        <div class="main-background">
+            <img src="{{ @BASE }}/img/background.jpg" alt="User Profile">
+        </div>
+    </section>
+</main>
