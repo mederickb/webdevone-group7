@@ -29,3 +29,6 @@ Day 10 (20/07)
 Day 11 (21/07)
 - Success to install Fat3 framework in our project
 - Success to reroute all main html
+
+Day 12 (22/07)
+- Try to create LoginModel and loginController but not working
