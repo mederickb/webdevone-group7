@@ -20,6 +20,9 @@
 
     <div class="auth-container">
         <form class="login-form" action="{{ @BASE }}/login" method="post">
+            <check if="{{ @error }}">
+                <div class="alert alert-danger custom-error">{{ @error }}</div>
+            </check>
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
             <input type="submit" class="btn btn-primary" value="Login"></input>

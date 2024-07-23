@@ -10,35 +10,28 @@
         </div>
         <h3>MY LISTS<span><img width="30" height="30" src="https://img.icons8.com/ios-filled/50/search--v1.png" alt="search--v1"/></span></h3>
         <div class="list-task">All Tasks <span class="menu-toggle">≡</span></div>
-        <div class="list-container">
+        <div>
             <div class="list-item">ToDo <a href="<?= ($BASE) ?>/new" class="addnew">+</a></div>
             <div class="list-item">Done <a href="<?= ($BASE) ?>/new" class="addnew">+</a></div>
             <div class="list-item">Overdue Task <a href="<?= ($BASE) ?>/new" class="addnew">+</a></div>
             <div class="list-item">Important! <a href="<?= ($BASE) ?>/new" class="addnew">+</a></div>
         </div>
     </aside>
-
-    <div class="auth-container">
-        <form class="login-form" action="<?= ($BASE) ?>/login" method="post">
-            <?php if ($error): ?>
-                <div class="alert alert-danger custom-error"><?= ($error) ?></div>
-            <?php endif; ?>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" class="btn btn-primary" value="Login"></input>
-        </form>
-
-        <hr>
-
-        <form class="signup-form" action="<?= ($BASE) ?>/signup" method="post">
-            <div class="name-fields">
-                <input type="text" name="firstName" placeholder="FirstName" required>
-                <input type="text" name="lastName" placeholder="LastName" required>
+    <div class="new-task">
+        <h2>New Task</h2>
+        <form action="<?= ($BASE) ?>/save-task" method="post">
+            <input type="text" class="task-input" name="task" placeholder="Enter new task" required>
+            <div class="date-time">
+              <div class="date-field">
+                <label for="due-date">Due Date</label>
+                <input type="date" id="due-date" name="due-date" required>
+              </div>
+              <div class="time-field">
+                <label for="due-time">Due Time</label>
+                <input type="time" id="due-time" name="due-time" required>
+              </div>
             </div>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" class="btn btn-primary" value="Signup"></input>
+            <button type="submit" class="save-btn">Save</button>
         </form>
     </div>
 </main>
-

@@ -60,6 +60,19 @@ main {
     box-sizing: border-box;
 }
 
+.custom-error {
+    color: white;
+    background-color: rgb(233, 45, 45);
+    width: 80%;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    padding-left: 50px;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-size: 28px;
+    border-radius: 20px;
+}
+
 .sidebar,
 .main-content {
     width: 50%; 

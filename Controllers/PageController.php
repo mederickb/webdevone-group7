@@ -12,12 +12,6 @@ class PageController {
         echo \Template::instance()->render('template.html');
     }
 
-    function login($f3) {
-        $f3->set('title', 'Login/Signup');
-        $f3->set('content', 'login.html');
-        echo \Template::instance()->render('template.html');
-    }
-
     function profile($f3) {
         $f3->set('title', 'Profile');
         $f3->set('content', 'profile.html');
