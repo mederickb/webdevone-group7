@@ -8,6 +8,10 @@ class LoginController {
     public function __construct($f3) {
         $this->f3 = $f3;
         $this->model = new LoginModel($f3);
+
+        // Set header and footer
+        $this->f3->set('header', 'includes/header.html');
+        $this->f3->set('footer', 'includes/footer.html');
     }
 
     public function login() {
@@ -34,7 +38,8 @@ class LoginController {
             echo \Template::instance()->render('template.html'); // Render the login page
         }
     }
-
+    
+    //TODO:
     public function logout() {
         $this->f3->clear('SESSION.user');
         $this->f3->reroute('/login');
