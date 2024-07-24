@@ -28,4 +28,10 @@ Day 13 (22/07)
 
 Day 14 (23/07)
 - DB connection fixed
-- More to come...
+
+Day 15 (24/07)
+- Working on task controller
+- General controller
+- Working on task model
+- added to index.php
+- lots of time troubleshooting (again)

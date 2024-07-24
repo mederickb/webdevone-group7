@@ -20,6 +20,8 @@ $f3->route('GET|POST /login', 'UserController->login');
 $f3->route('POST /logout', 'UserController->logout');
 $f3->route('GET|POST /signup', 'UserController->register');
 
+// To do list CRUD
+$f3->route("GET|POST /todo", 'TaskController->getCompleted');
 
 // Run the framework
 $f3->run();

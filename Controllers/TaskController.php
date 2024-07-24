@@ -21,6 +21,6 @@ class TaskController extends Controller {
 		
 		$this->f3->set('tasks', $tasks);
 		$this.setPageTitle("Completed");
-		echo $this->template->render('tasks/completed');
+		echo $this->template->render('tasks/tasks.html');
 	}
 }
