@@ -1,0 +1,14 @@
+<include href="includes/header.html">
+	<div id="main">
+		<h1>Tasks</h1>
+		<check if="{{@errors}}">
+			<p class='messages'> </p>
+		</check>
+
+		<repeat group="{{@results}}" value="{{@item}}">
+			<article>
+				<p>{{ @item['content'] | nl2br }}</p>
+			</article>
+		</repeat>
+	</div>
+<include href="includes/footer.html">
