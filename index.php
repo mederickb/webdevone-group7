@@ -16,9 +16,9 @@ $f3->route('GET /update', 'PageController->update');
 $f3->route('GET /contactus', 'PageController->contactus');
 
 // Login routes
-$f3->route('GET /login', 'LoginController->login');
-$f3->route('POST /login', 'LoginController->login');
-$f3->route('POST /logout', 'LoginController->logout');
+$f3->route('GET|POST /login', 'UserController->login');
+$f3->route('POST /logout', 'UserController->logout');
+$f3->route('GET|POST /signup', 'UserController->register');
 
 
 // Run the framework
