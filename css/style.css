@@ -62,7 +62,7 @@ main {
 
 .custom-error {
     color: white;
-    background-color: rgb(233, 45, 45);
+    background-color: rgb(243, 77, 77);
     width: 80%;
     margin-bottom: 10px;
     margin-left: 30px;
@@ -137,11 +137,12 @@ nav a {
 .user-section {
     display: flex;
     align-items: center;
+    padding: 10px;
 }
 
 .user-icon {
-    width: 80px;
-    height: 80px;
+    max-width: 100px;
+    max-height: 100px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 20px;
@@ -149,14 +150,12 @@ nav a {
 
 .user-icon img {
     width: 100%;
-    height: auto;
     display: block;
 }
 
 .user-login {
-    font-size: 20px;
+    font-size: 38px;
     text-decoration: underline;
-    font-size: 32px;
     padding-left: 10PX;
 }
 
@@ -165,8 +164,15 @@ nav a {
     color: inherit;
 }
 
+.user-name {
+    font-size: 32px;
+    margin-left: 20px;
+    text-align: center; 
+}
+
 .edit-icon {
     margin-left: 30px;
+    margin-top: 10px;
 }
 
 .list-item, h3, .list-task{
@@ -241,6 +247,7 @@ textarea {
     border-radius: 20px;
     color: #fff;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .btn-primary {

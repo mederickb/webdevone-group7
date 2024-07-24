@@ -1,8 +1,6 @@
 <?php
 require_once 'Models/LoginModel.php';
 
-$errMessages = [];
-
 class LoginController {
     private $f3;
     private $model;
@@ -11,7 +9,6 @@ class LoginController {
         $this->f3 = $f3;
         $this->model = new LoginModel($f3);
 
-        // Set header and footer
         $this->f3->set('header', 'includes/header.html');
         $this->f3->set('footer', 'includes/footer.html');
     }
@@ -21,28 +18,29 @@ class LoginController {
             $email = filter_var($this->f3->get('POST.email'), FILTER_SANITIZE_EMAIL);
             $password = $this->f3->get('POST.password');
     
-            // Authenticate user
             $user = $this->model->authenticate($email, $password);
     
             if ($user) {
                 $this->f3->set('SESSION.user', $user);
-                $this->f3->reroute('/new'); // Redirect to AddNewTask page upon successful login
+                $this->f3->set('SESSION.fullname', '');
+                $this->f3->set('SESSION.fullname', $user['first_name'] . ' ' . $user['last_name']);
+                $this->f3->reroute('/new');
             } else {
                 $this->f3->set('error', '  * Invalid Email or Password !');
             }
         } else {
-            $this->f3->set('error', ''); // set $error 
+            $this->f3->set('error', '');
         }
 
         $this->f3->set('title', 'Login');
         $this->f3->set('content', 'login.html');
-        echo \Template::instance()->render('template.html'); // Render the login page
+        echo \Template::instance()->render('template.html');
     }
     
     
-    //TODO:
+    
     public function logout() {
-        $this->f3->clear('SESSION.user');
+        $this->f3->clear('SESSION');
         $this->f3->reroute('/login');
     }
 }
