@@ -8,7 +8,9 @@
                 </div>
                 <div class="user-name">
                     <span class="text-login"><?= ($SESSION['fullname']) ?></span>
-                    <input type="submit" class="btn btn-primary" value="Logout"></input>
+                    <form action="<?= ($BASE) ?>/logout" method="post">
+                        <input type="submit" class="btn btn-primary" value="Logout"></input>
+                    </form>
                 </div>   
             </div>
             <h3>MY LISTS<span><img width="30" height="30" src="https://img.icons8.com/ios-filled/50/search--v1.png" alt="search--v1"/></span></h3>
