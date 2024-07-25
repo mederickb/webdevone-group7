@@ -23,4 +23,15 @@ class ListsController extends Controller {
         $this->setPageTitle("User Lists");
         echo $this->template->render('tasks/lists.html');
     }
+
+    /**
+     * Listing all user 1 lists (temp) for dropdown
+     */
+    public function getListsDrop() {
+        $lists = $this->model->fetchLists();
+
+        $this->f3->set('lists', $lists);
+        $this->setPageTitle("User Lists");
+        echo $this->template->render('tasks/lists-dropdown.html');
+    }
 }

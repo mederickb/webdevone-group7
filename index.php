@@ -23,17 +23,17 @@ $f3->route('GET|POST /signup', 'UserController->register');
 // Profile routes
 $f3->route('GET|POST /update-profile', 'UserController->updateProfile');
 
-
 // Contact us routes
 $f3->route('GET /contact', 'ContactController->showContactPage');
 $f3->route('GET|POST /submit-contact', 'ContactController->submitContact');
+
 // To do list CRUD
 $f3->route("GET|POST /done", 'TaskController->getDone'); // completed tasks
 $f3->route("GET|POST /notdone", 'TaskController->getNotDone'); // incomplete tasks
 $f3->route("GET|POST /lists", 'ListsController->getLists'); // get all lists
 
-$f3->route("GET /tasks/add", 'TaskController->addTask');
-$f3->route("POST /tasks/add", 'TaskController->addTaskSave');
+$f3->route("GET /tasks/add", 'TaskController->addTask'); // add task
+$f3->route("POST /tasks/add", 'TaskController->addTaskSave'); // verify added task
 
 
 // Run the framework

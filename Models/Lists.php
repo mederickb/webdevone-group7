@@ -18,7 +18,7 @@ class Lists extends Model {
      */
     public function fetchLists() {
         //$userId = $this->f3->get('SESSION.user_id', $user['user_id']);
-        $this->load('user_id=' . 1); // temporary hard-coded user
+        $this->load('user_id=1'); // temporary hard-coded user
         return $this->query;
     }
 }
