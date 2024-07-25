@@ -38,6 +38,10 @@
             <textarea id="comments" name="comments" rows="4" placeholder="Welcome to leave your comments..." required></textarea>
           </div>
           <button type="submit">Send</button>
+          <div class="success-message"></div>
         </form>
+        <check if="{{ isset(@success) }}">
+            <div class="success-message">{{ @success }}</div>
+        </check>
     </div>
 </main>

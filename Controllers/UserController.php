@@ -168,4 +168,3 @@ class UserController {
         $f3->reroute('/new');
     }
 }
-//$2y$10$2PH8wjbfBB5qyHgJDnt01u/KyB5I/Bcca1XY16FUpZePb5umDZ6kq

@@ -23,6 +23,10 @@ $f3->route('GET|POST /signup', 'UserController->register');
 // Profile routes
 $f3->route('GET|POST /update-profile', 'UserController->updateProfile');
 
+
+// Contact us routes
+$f3->route('GET /contact', 'ContactController->showContactPage');
+$f3->route('GET|POST /submit-contact', 'ContactController->submitContact');
 // To do list CRUD
 $f3->route("GET|POST /done", 'TaskController->getDone'); // completed tasks
 $f3->route("GET|POST /notdone", 'TaskController->getNotDone'); // incomplete tasks
