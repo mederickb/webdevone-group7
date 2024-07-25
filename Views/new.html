@@ -22,17 +22,17 @@
     </aside>
     <div class="new-task">
         <h2>New Task</h2>
-        <form action="{{ @BASE }}/save-task" method="post">
-            <input type="text" class="task-input" name="task" placeholder="Enter new task" required>
+        <form action="{{ @BASE }}/tasks/add" method="POST">
+            <input type="text" class="task-input" name="content" placeholder="Enter new task" required>
             <div class="date-time">
               <div class="date-field">
-                <label for="due-date">Due Date (optional)</label>
-                <input type="date" id="due-date" name="due-date">
+                <label for="due_date">Due Date (optional)</label>
+                <input type="date" id="due_date" name="due_date">
               </div>
               <div class="list-dropdown">
                 <label for="list">Add to List</label>
-                  <select name="list" id="list">
-                      <option value="1">Placeholder</option>
+                  <select name="list_id" id="list">
+                      <option value="1">Testing List</option>
                   </select>
               </div>
 <!--                Disabling time field for simplicity, will be readded if there's time-->
@@ -41,7 +41,7 @@
 <!--                <input type="time" id="due-time" name="due-time" required>-->
 <!--              </div>-->
             </div>
-            <button type="submit" class="save-btn">Save</button>
+            <input type="submit" class="btn btn-primary btn-lg mt-3">
         </form>
     </div>
 </main>
