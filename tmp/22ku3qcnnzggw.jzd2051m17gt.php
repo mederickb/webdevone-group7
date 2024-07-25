@@ -1,5 +1,3 @@
-
-
     <main>
         <aside class="sidebar">
             <div class="user-section">
@@ -30,18 +28,18 @@
                     <img src="<?= ($BASE) ?>/img/profile.jpg" alt="Profile Picture">
                     <button class="btn btn-upload">Upload</button>
                 </div>
-                <form class="profile-form">
+                <form class="profile-form" action="<?= ($BASE) ?>/update-profile" method="post">
                     <div class="name-fields">
-                        <input type="text" placeholder="FirstName" required>
-                        <input type="text" placeholder="LastName" required>
+                        <input type="text" name="firstName" placeholder="FirstName" required>
+                        <input type="text" name="lastName" placeholder="LastName" required>
                     </div>
-                    <input type="password" placeholder="New Password">
+                    <input type="password" name="currentPassword" placeholder="Current Password">
+                    <input type="password" name="newPassword" placeholder="New Password">
                     <div class="button-group">
                         <button type="button" class="btn btn-secondary">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <input type="submit" class="btn btn-primary" value="Save"></input>
                     </div>
                 </form>
             </div>
         </div>
-
     </main>

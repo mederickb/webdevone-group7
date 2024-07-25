@@ -39,4 +39,18 @@ class UserModel extends Model {
 
         return $result ? $this->db->lastInsertId() : false;
     }
+
+    function getById($id) {
+        return $this->db->exec('SELECT * FROM user WHERE user_id = ?', $id)[0];
+    }
+
+    function updateName($id, $firstName, $lastName) {
+        $this->db->exec('UPDATE user SET first_name = ?, last_name = ? WHERE user_id = ?',
+            [$firstName, $lastName, $id]);
+    }
+
+    function updatePassword($id, $password) {
+        $this->db->exec('UPDATE user SET password = ? WHERE user_id = ?',
+            [$password, $id]);
+    }
 }

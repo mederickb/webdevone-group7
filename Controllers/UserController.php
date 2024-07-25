@@ -38,7 +38,7 @@ class UserController {
     
             if ($user) {
                 $this->f3->set('SESSION.user', $user);
-                $this->f3->set('SESSION.fullname', '');
+                $this->f3->set('SESSION.user_id', $user['user_id']);
                 $this->f3->set('SESSION.fullname', $user['first_name'] . ' ' . $user['last_name']);
                 $this->f3->reroute('/new');
             } else {
@@ -92,6 +92,7 @@ class UserController {
                 // Registration successful
                 $newUser['id'] = $result; // Add the new user ID to the array
                 $f3->set('SESSION.user', $newUser);
+                $f3->set('SESSION.user_id', $newUser['id']);
                 $f3->set('SESSION.fullname', $newUser['first_name'] . ' ' . $newUser['last_name']);
                 $f3->reroute('/new'); // Redirect to new page
             } else {
@@ -110,5 +111,61 @@ class UserController {
         $f3->set('title', 'Login/Signup');
         $f3->set('content', 'login.html');
         echo \Template::instance()->render('template.html');
+    }
+
+    public function updateProfile($f3) {
+        // Check if the user is logged in
+        if (!$f3->exists('SESSION.user_id')) {
+            $f3->reroute('/login');
+        }
+
+        // Get the form data
+        $firstName = $f3->get('POST.firstName');
+        $lastName = $f3->get('POST.lastName');
+        $currentPassword = $f3->get('POST.currentPassword');
+        $newPassword = $f3->get('POST.newPassword');
+    
+        // Get the user from the database
+        $user = new UserModel($f3->get('DB'));
+        $userData = $user->getById($f3->get('SESSION.user_id'));
+    
+        if (!$userData) {
+            $f3->error(404);
+        }
+
+        $nameUpdated = false;
+        $passwordUpdated = false;
+    
+        // Check if the new name is different from the existing one
+        if ($firstName !== $userData['first_name'] || $lastName !== $userData['last_name']) {
+            // Update the user's name only if it has changed
+            $user->updateName($f3->get('SESSION.user_id'), $firstName, $lastName);
+            $f3->set('SESSION.fullname', $firstName . ' ' . $lastName);
+            $nameUpdated = true;
+        }
+    
+        // Update the password if provided
+        $passwordUpdated = false;
+        if (!empty($currentPassword) && !empty($newPassword)) {
+            if (password_verify($currentPassword, $userData['password'])) {
+                $password = $newPassword;
+                $user->updatePassword($f3->get('SESSION.user_id'), $password);
+                $passwordUpdated = true;
+            } else {
+                $f3->set('error', 'Current password is incorrect.');
+                $f3->reroute('/profile');
+            }
+        }
+    
+        if ($nameUpdated && $passwordUpdated) {
+            $f3->set('success', 'Name and password updated successfully.');
+        } elseif ($nameUpdated) {
+            $f3->set('success', 'Name updated successfully.');
+        } elseif ($passwordUpdated) {
+            $f3->set('success', 'Password updated successfully.');
+        } else {
+            $f3->set('success', 'No changes were made.');
+        }
+        $f3->reroute('/new');
     }
 }
