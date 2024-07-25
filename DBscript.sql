@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 19, 2024 at 07:16 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: localhost:8889
+-- Generation Time: Jul 25, 2024 at 04:36 AM
+-- Server version: 8.0.35
+-- PHP Version: 8.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `fsd12_07`
 --
-CREATE DATABASE IF NOT EXISTS `fsd12_07` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `fsd12_07`;
 
 -- --------------------------------------------------------
 
@@ -30,10 +28,17 @@ USE `fsd12_07`;
 --
 
 CREATE TABLE `list` (
-  `list_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `list_name` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `list_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `list_name` varchar(50) COLLATE utf8mb3_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+--
+-- Dumping data for table `list`
+--
+
+INSERT INTO `list` (`list_id`, `user_id`, `list_name`) VALUES
+(1, 1, 'Chores');
 
 -- --------------------------------------------------------
 
@@ -42,11 +47,22 @@ CREATE TABLE `list` (
 --
 
 CREATE TABLE `task` (
-  `task_id` int(11) NOT NULL,
-  `list_id` int(11) NOT NULL,
-  `content` varchar(500) NOT NULL,
-  `is_completed` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `task_id` int NOT NULL,
+  `list_id` int NOT NULL,
+  `content` varchar(500) COLLATE utf8mb3_unicode_ci NOT NULL,
+  `is_completed` tinyint(1) NOT NULL,
+  `due_date` date
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+--
+-- Dumping data for table `task`
+--
+
+INSERT INTO `task` (`task_id`, `list_id`, `content`, `is_completed`) VALUES
+(2, 1, 'hello world!', 1),
+(3, 1, 'Take out trash', 1),
+(4, 1, 'Do the dishes', 1),
+(5, 1, 'Mop floor', 0);
 
 -- --------------------------------------------------------
 
@@ -55,20 +71,19 @@ CREATE TABLE `task` (
 --
 
 CREATE TABLE `user` (
-  `user_id` int(11) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `user_id` int NOT NULL,
+  `email` varchar(100) COLLATE utf8mb3_unicode_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8mb3_unicode_ci NOT NULL,
+  `first_name` varchar(50) COLLATE utf8mb3_unicode_ci NOT NULL,
+  `last_name` varchar(50) COLLATE utf8mb3_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_id`, `email`, `password`, `first_name`, `last_name`) VALUES
-(1, 'john@example.com', '1234', 'John', 'Doe'),
-(2, 'jane@example.com', '4321', 'Jane', 'Doe');
+(1, 'johnsmith@apple.com', '$2y$10$FDtbhmYw7X713Sc3BH7VOe9l44caKt96WBZetNsRe1LvgD3s/3OVq', 'John', 'Smith');
 
 --
 -- Indexes for dumped tables
@@ -102,19 +117,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `list`
 --
 ALTER TABLE `list`
-  MODIFY `list_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `list_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `task`
 --
 ALTER TABLE `task`
-  MODIFY `task_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `task_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
