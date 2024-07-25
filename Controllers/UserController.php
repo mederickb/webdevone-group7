@@ -148,8 +148,7 @@ class UserController {
         $passwordUpdated = false;
         if (!empty($currentPassword) && !empty($newPassword)) {
             if (password_verify($currentPassword, $userData['password'])) {
-                $password = $newPassword;
-                $user->updatePassword($f3->get('SESSION.user_id'), $password);
+                $user->updatePassword($f3->get('SESSION.user_id'), $newPassword);
                 $passwordUpdated = true;
             } else {
                 $f3->set('error', 'Current password is incorrect.');
@@ -169,3 +168,4 @@ class UserController {
         $f3->reroute('/new');
     }
 }
+//$2y$10$2PH8wjbfBB5qyHgJDnt01u/KyB5I/Bcca1XY16FUpZePb5umDZ6kq

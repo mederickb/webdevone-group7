@@ -8,7 +8,7 @@ class UserModel extends Model {
 
     public function authenticate($email, $password) {
         $user = $this->getByField('email', $email);
-        if ($user && $user['password'] === $password) {
+        if ($user && password_verify($password, $user['password'])) {
             return $user;
         }
         return false;
@@ -50,7 +50,8 @@ class UserModel extends Model {
     }
 
     function updatePassword($id, $password) {
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $this->db->exec('UPDATE user SET password = ? WHERE user_id = ?',
-            [$password, $id]);
+            [$hashedPassword, $id]);
     }
 }
