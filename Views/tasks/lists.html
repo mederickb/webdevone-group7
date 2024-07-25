@@ -1,0 +1,10 @@
+<!--REUSABLE LIST OF LISTS ASIDE FOR LOGGED IN USERS, DO NOT USE UNTIL COMPLETED-->
+<check if="{{@errors}}">
+    <p class='messages'> </p>
+</check>
+
+<div class="list-container">
+    <repeat group="{{@lists}}" value="{{@item}}">
+        <div class="list-item">{{ @item['list_name'] }} <a href="{{ @BASE }}/new" class="addnew">+</a></div>
+    </repeat>
+</div>
