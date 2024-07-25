@@ -14,16 +14,20 @@ class Controller {
 		
 		$this->template = new Template;
 	}
-	
+
+    /**
+     * Sets the page's title. Should not require any further modification to work.
+     * @param string $title New title to append
+     */
 	public function setPageTitle($title) {
 		$currentTitle = $this->f3->get("pageTitle");
 		$newTitle = $title;
-		
+
 		if ($currentTitle != "") {
 			// append
 			$newTitle .= " | ". $currentTitle;
 		}
-		
-		$this->f3->set('pageTitle', $newTitle);
+
+		$this->f3->set('title', $newTitle);
 	}
 }

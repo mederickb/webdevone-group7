@@ -6,8 +6,8 @@ class Task extends Model {
 	/**
 	 * Establish table to use
 	 */
-	public function __construct() {
-		parent::__construct('task');
+	public function __construct($f3) {
+		parent::__construct($f3,'task');
 	}
 	
 	/**

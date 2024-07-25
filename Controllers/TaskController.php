@@ -10,7 +10,7 @@ class TaskController extends Controller {
 	public function __construct($f3) {
 		parent::__construct($f3);
 		
-		$this->model = new Task(); // est db connection
+		$this->model = new Task($f3); // est db connection
 	}
 	
 	/**
@@ -20,7 +20,7 @@ class TaskController extends Controller {
 		$tasks = $this->model->fetchDone();
 		
 		$this->f3->set('tasks', $tasks);
-		$this.setPageTitle("Completed");
+		$this->setPageTitle("Completed");
 		echo $this->template->render('tasks/tasks.html');
 	}
 }
