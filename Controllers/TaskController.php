@@ -16,11 +16,22 @@ class TaskController extends Controller {
 	/**
 	 * Listing all completed to do list items
 	 */
-	public function getCompleted() {
+	public function getDone() {
 		$tasks = $this->model->fetchDone();
 		
 		$this->f3->set('tasks', $tasks);
-		$this->setPageTitle("Completed");
+		$this->setPageTitle("Completed Tasks");
 		echo $this->template->render('tasks/tasks.html');
 	}
+
+    /**
+     * Listing all incomplete to do list items
+     */
+    public function getNotDone() {
+        $tasks = $this->model->fetchNotDone();
+
+        $this->f3->set('tasks', $tasks);
+        $this->setPageTitle("Incomplete Tasks");
+        echo $this->template->render('tasks/tasks.html');
+    }
 }

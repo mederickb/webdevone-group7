@@ -21,7 +21,8 @@ $f3->route('POST /logout', 'UserController->logout');
 $f3->route('GET|POST /signup', 'UserController->register');
 
 // To do list CRUD
-$f3->route("GET|POST /todo", 'TaskController->getCompleted');
+$f3->route("GET|POST /done", 'TaskController->getDone'); // completed tasks
+$f3->route("GET|POST /notdone", 'TaskController->getNotDone'); // incomplete tasks
 
 // Run the framework
 $f3->run();

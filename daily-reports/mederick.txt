@@ -33,5 +33,10 @@ Day 15 (24/07)
 - Working on task controller
 - General controller
 - Working on task model
-- added to index.php
-- lots of time troubleshooting (again)
+- Added to index.php
+- Lots of time troubleshooting (again)
+- Finally got the basics of the task stuff working
+
+Day 16 (25/07)
+- Added a function to retrieve incomplete tasks (still rather unsophisticated)
+- ...

@@ -11,13 +11,21 @@ class Task extends Model {
 	}
 	
 	/**
-	 * Fetch all completed to do list items (for testing purposes)
+	 * Fetch all completed to do list items
 	 * @return Object database results
 	 */
 	public function fetchDone() {
 		$this->load('is_completed=1');
 		return $this->query;
 	}
+
+    /**
+     * Fetch all incomplete to do list items
+     */
+    public function fetchNotDone() {
+        $this->load('is_completed=0');
+        return $this->query;
+    }
 
     /**
      * Dummy method
