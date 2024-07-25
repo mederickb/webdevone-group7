@@ -39,4 +39,5 @@ Day 15 (24/07)
 
 Day 16 (25/07)
 - Added a function to retrieve incomplete tasks (still rather unsophisticated)
-- ...
+- Changes to database
+- Add task function (working but incomplete)

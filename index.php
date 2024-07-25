@@ -32,6 +32,9 @@ $f3->route("GET|POST /done", 'TaskController->getDone'); // completed tasks
 $f3->route("GET|POST /notdone", 'TaskController->getNotDone'); // incomplete tasks
 $f3->route("GET|POST /lists", 'ListsController->getLists'); // get all lists
 
+$f3->route("GET /tasks/add", 'TaskController->addTask');
+$f3->route("POST /tasks/add", 'TaskController->addTaskSave');
+
 
 // Run the framework
 $f3->run();

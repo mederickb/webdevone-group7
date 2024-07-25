@@ -5,6 +5,10 @@
 class Model extends DB\SQL\Mapper {
 
     protected $db; // database connection
+    /**
+     * @var mixed
+     */
+    private $id;
 
     public function __construct($f3, $table) {
         $this->db = new DB\SQL(

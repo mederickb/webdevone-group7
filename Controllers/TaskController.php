@@ -39,7 +39,7 @@ class TaskController extends Controller {
      * Prepare to create new task
      */
     public function addTask() {
-        $data = ['content'=>'', 'due_date'=>''];
+        $data = ['list_id'=>'', 'content'=>'', 'due_date'=>''];
         $this->f3->set('item', $data);
 
         $this->setPageTitle("Add Task");
