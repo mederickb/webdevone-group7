@@ -20,10 +20,9 @@ $f3->route('GET|POST /login', 'UserController->login');
 $f3->route('POST /logout', 'UserController->logout');
 $f3->route('GET|POST /signup', 'UserController->register');
 
-// Profile routes
-$f3->route('GET|POST /update-profile', 'UserController->updateProfile');
-
-$f3->route('GET|POST /save-task', 'TaskController->getCompleted');
+// To do list CRUD
+$f3->route("GET|POST /done", 'TaskController->getDone'); // completed tasks
+$f3->route("GET|POST /notdone", 'TaskController->getNotDone'); // incomplete tasks
 
 
 // Run the framework

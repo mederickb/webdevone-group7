@@ -28,4 +28,15 @@ Day 13 (22/07)
 
 Day 14 (23/07)
 - DB connection fixed
-- More to come...
+
+Day 15 (24/07)
+- Working on task controller
+- General controller
+- Working on task model
+- Added to index.php
+- Lots of time troubleshooting (again)
+- Finally got the basics of the task stuff working
+
+Day 16 (25/07)
+- Added a function to retrieve incomplete tasks (still rather unsophisticated)
+- ...
