@@ -17,7 +17,8 @@ class Lists extends Model {
      * @return Object database results
      */
     public function fetchLists() {
-        $this->load('user_id=1');
+        //$userId = $this->f3->get('SESSION.user_id', $user['user_id']);
+        $this->load('user_id=' . 1); // temporary hard-coded user
         return $this->query;
     }
 }

@@ -26,13 +26,20 @@
             <input type="text" class="task-input" name="task" placeholder="Enter new task" required>
             <div class="date-time">
               <div class="date-field">
-                <label for="due-date">Due Date</label>
-                <input type="date" id="due-date" name="due-date" required>
+                <label for="due-date">Due Date (optional)</label>
+                <input type="date" id="due-date" name="due-date">
               </div>
-              <div class="time-field">
-                <label for="due-time">Due Time</label>
-                <input type="time" id="due-time" name="due-time" required>
+              <div class="list-dropdown">
+                <label for="list">Add to List</label>
+                  <select name="list" id="list">
+                      <option value="1">Placeholder</option>
+                  </select>
               </div>
+<!--                Disabling time field for simplicity, will be readded if there's time-->
+<!--              <div class="time-field">-->
+<!--                <label for="due-time">Due Time</label>-->
+<!--                <input type="time" id="due-time" name="due-time" required>-->
+<!--              </div>-->
             </div>
             <button type="submit" class="save-btn">Save</button>
         </form>

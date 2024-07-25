@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `list` (
   `list_id` int NOT NULL,
   `user_id` int NOT NULL,
-  `list_name` varchar(50) COLLATE utf8mb3_unicode_ci DEFAULT NULL
+  `list_name` varchar(50) COLLATE utf8mb3_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
@@ -38,7 +38,8 @@ CREATE TABLE `list` (
 --
 
 INSERT INTO `list` (`list_id`, `user_id`, `list_name`) VALUES
-(1, 1, 'Chores');
+(1, 1, 'Chores'),
+(2, 1, 'Homework');
 
 -- --------------------------------------------------------
 
@@ -50,7 +51,7 @@ CREATE TABLE `task` (
   `task_id` int NOT NULL,
   `list_id` int NOT NULL,
   `content` varchar(500) COLLATE utf8mb3_unicode_ci NOT NULL,
-  `is_completed` tinyint(1) NOT NULL,
+  `is_completed` tinyint(1) NOT NULL DEFAULT 0,
   `due_date` date
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
@@ -83,7 +84,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `email`, `password`, `first_name`, `last_name`) VALUES
-(1, 'johnsmith@apple.com', '$2y$10$FDtbhmYw7X713Sc3BH7VOe9l44caKt96WBZetNsRe1LvgD3s/3OVq', 'John', 'Smith');
+(1, 'johnsmith@apple.com', '$2y$10$FDtbhmYw7X713Sc3BH7VOe9l44caKt96WBZetNsRe1LvgD3s/3OVq', 'John', 'Smith'),
+(2, 'rhaenys@driftmark.com', '$2y$10$qrfaaq6g1IVYcZ0USwFkzuEyhAarY2yM5ObIt2Iw3FUFwZt/Itau.', 'Rhaenys', 'Targaryen');
 
 --
 -- Indexes for dumped tables

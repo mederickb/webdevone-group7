@@ -6,9 +6,9 @@
 		</check>
 
 		<repeat group="{{@tasks}}" value="{{@item}}">
-			<article>
-				<p>{{ @item['content'] | nl2br }}</p>
-			</article>
+			<div class="task">
+				<input type="checkbox"> {{ @item['content'] | nl2br }}
+			</div>
 		</repeat>
 	</div>
 <include href="includes/footer.html">

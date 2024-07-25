@@ -34,4 +34,50 @@ class TaskController extends Controller {
         $this->setPageTitle("Incomplete Tasks");
         echo $this->template->render('tasks/tasks.html');
     }
+
+    /**
+     * Prepare to create new task
+     */
+    public function addTask() {
+        $data = ['content'=>'', 'due_date'=>''];
+        $this->f3->set('item', $data);
+
+        $this->setPageTitle("Add Task");
+        echo $this->template->render('new.html');
+    }
+
+    /**
+     * Validate and create new task
+     */
+    public function addTaskSave() {
+        if ($this->isFormValid()) {
+            $itemId = $this->model->addItem();
+            //TODO: reroute to list that task was added to
+        }
+    }
+
+    /**
+     * Validate form data after POST
+     * If it does not validate, it returns false.
+     * @return boolean TRUE if valid
+     */
+    private function isFormValid() {
+        $errors = [];
+        // validate content
+        if (trim($this->f3->get("POST.content")) == "") {
+            array_push($errors, "Content is required.");
+        }
+        // TODO: validate list(?) and date(?)
+
+        if (empty($errors)) {
+            return true;
+        }
+        else {
+            $this->f3->set("item", $this->f3->get("POST"));
+
+            $this->f3->set("errors", $errors);
+            echo $this->template->render('new.html');
+            return false;
+        }
+    }
 }

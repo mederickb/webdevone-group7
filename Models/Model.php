@@ -78,4 +78,15 @@ class Model extends DB\SQL\Mapper {
         }
         return false;
     }
+
+    /**
+     * Insert new row into table using POST data
+     * @return int Last inserted ID
+     */
+    public function addItem() {
+        $this->copyfrom('POST');
+        $this->save();
+
+        return $this->id; // last inserted ID
+    }
 }
