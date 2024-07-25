@@ -13,6 +13,7 @@ composer.phar
 
 # Additions to template
 .idea/
+/tmp/
 
 # User-specific stuff
 .idea/**/workspace.xml
