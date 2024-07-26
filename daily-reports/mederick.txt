@@ -46,3 +46,5 @@ Day 16 (25/07)
 Day 17 (26/07)
 - Finished work on documentation
 - Added contact table to database
+- Added edit and delete function to tasks
+- Added add, edit, and delete functions to lists

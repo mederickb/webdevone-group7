@@ -41,11 +41,11 @@ $f3->route("POST /tasks/@pid/delete", 'TaskController->deleteTask'); // delete t
 // Lists
 $f3->route("GET|POST /lists", 'ListsController->getLists'); // get all lists
 
-// add list
-// verify
-// edit list
-// verify
-// delete list
+$f3->route("GET /lists/add", 'ListsController->addList'); // add list
+$f3->route("POST /lists/add", 'ListsController->addListSave'); // verify
+$f3->route("GET /lists/@pid/edit", 'ListsController->editList'); // edit list
+$f3->route("POST /lists/@pid/edit", 'ListsController->editListSave'); // verify
+$f3->route("POST /lists/@pid/delete", 'ListsController->deleteList'); // delete task
 
 // Run the framework
 $f3->run();
