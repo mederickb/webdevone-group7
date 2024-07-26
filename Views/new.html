@@ -15,9 +15,21 @@
         <div class="list-task">All Tasks <span class="menu-toggle">≡</span></div>
         <div>
             <div class="list-item">ToDo <a href="{{ @BASE }}/new" class="addnew">+</a></div>
+            <ul>
+                <li>Do the homework<span class="edit-icon"><a href="{{ @BASE }}/update"><img width="20" height="20"src="https://img.icons8.com/wired/64/edit.png" alt="edit" /></a></span></li>
+            </ul>
             <div class="list-item">Done <a href="{{ @BASE }}/new" class="addnew">+</a></div>
+            <ul>
+                <li>Do the homework<span class="edit-icon"><a href="{{ @BASE }}/update"><img width="20" height="20"src="https://img.icons8.com/wired/64/edit.png" alt="edit" /></a></span></li>
+            </ul>
             <div class="list-item">Overdue Task <a href="{{ @BASE }}/new" class="addnew">+</a></div>
+            <ul>
+                <li><span class="edit-icon"><a href="{{ @BASE }}/update"><img width="20" height="20"src="https://img.icons8.com/wired/64/edit.png" alt="edit" /></a></span></li>
+            </ul>
             <div class="list-item">Important! <a href="{{ @BASE }}/new" class="addnew">+</a></div>
+            <ul>
+                <li><span class="edit-icon"><a href="{{ @BASE }}/update"><img width="20" height="20"src="https://img.icons8.com/wired/64/edit.png" alt="edit" /></a></span></li>
+            </ul>
         </div>
     </aside>
     <div class="new-task">
@@ -30,10 +42,12 @@
                 <input type="date" id="due_date" name="due_date">
               </div>
               <div class="list-dropdown">
-                <label for="list">Add to List</label>
-                  <select name="list_id" id="list">
-                      <option value="1">Testing List</option>
-                  </select>
+                <label name="lists">Task Category</label>
+                <select name="list_id">
+                    <option value="1">ToDo</option>
+                    <option value="2">Done</option>
+                    <option value="3">Important</option>
+                </select>
               </div>
 <!--                Disabling time field for simplicity, will be readded if there's time-->
 <!--              <div class="time-field">-->
@@ -41,7 +55,7 @@
 <!--                <input type="time" id="due-time" name="due-time" required>-->
 <!--              </div>-->
             </div>
-            <input type="submit" class="btn btn-primary btn-lg mt-3">
+            <input type="submit" class="btn btn-primary btn-lg mt-3" value="AddTask">
         </form>
     </div>
 </main>
