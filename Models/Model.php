@@ -58,16 +58,10 @@ class Model extends DB\SQL\Mapper {
      * Update existing $id row from our table 
      * @param int ID of the row to edit
      */
-    public function updateById($id, $data) {
-        $this->load(['id = ?', $id]);
-        if ($this->loaded()) {
-            foreach ($data as $key => $value) {
-                $this->$key = $value;
-            }
-            $this->update();
-            return true;
-        }
-        return false;
+    public function updateById($id) {
+        $this->load(['$id => ?', $id]);
+        $this->copyfrom('POST');
+        $this->update();
     }
 
     /**
@@ -92,5 +86,14 @@ class Model extends DB\SQL\Mapper {
         $this->save();
 
         return $this->id; // last inserted ID
+    }
+
+    /**
+     * Fetch a value from the table using an id
+     * @param int $id ID of row
+     * @return Object database result
+     */
+    public function fetchById($id) {
+        return $this->findone(['id = ?', $id]);
     }
 }

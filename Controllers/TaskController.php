@@ -57,6 +57,41 @@ class TaskController extends Controller {
     }
 
     /**
+     * Prepare to edit an existing task
+     */
+    public function editTask() {
+        $item = $this->model->fetchById($this->f3->get('PARAMS.pid'));
+
+        if (!$item) {
+            //TODO: reroute differently?
+            $this->f3->reroute('/new');
+        }
+
+        $this->f3->set('item', $item);
+        $this->setPageTitle("Edit Task");
+        echo $this->template->render('tasks/updating.html');
+    }
+
+    /**
+     * Validate and edit an existing task
+     */
+    public function editTaskSave() {
+        if ($this->isFormValid()) {
+            $itemId = $this->f3->get('PARAMS.pid');
+            $this->model->updateById($itemId);
+            $this->f3->reroute('/new');
+        }
+    }
+
+    /**
+     * Deletes a given task
+     */
+    public function deleteTask() {
+        $this->model->deleteById($this->f3->get('PARAMS.pid'));
+        //TODO: Reroute?
+    }
+
+    /**
      * Validate form data after POST
      * If it does not validate, it returns false.
      * @return boolean TRUE if valid

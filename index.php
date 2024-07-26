@@ -27,14 +27,25 @@ $f3->route('GET|POST /update-profile', 'UserController->updateProfile');
 $f3->route('GET /contact', 'ContactController->showContactPage');
 $f3->route('GET|POST /submit-contact', 'ContactController->submitContact');
 
-// To do list CRUD
+// CRUD
+// Tasks
 $f3->route("GET|POST /done", 'TaskController->getDone'); // completed tasks
 $f3->route("GET|POST /notdone", 'TaskController->getNotDone'); // incomplete tasks
-$f3->route("GET|POST /lists", 'ListsController->getLists'); // get all lists
 
 $f3->route("GET /tasks/add", 'TaskController->addTask'); // add task
-$f3->route("POST /tasks/add", 'TaskController->addTaskSave'); // verify added task
+$f3->route("POST /tasks/add", 'TaskController->addTaskSave'); // verify
+$f3->route("GET /tasks/@pid/edit", 'TaskController->editTask'); // edit task
+$f3->route("POST /tasks/@pid/edit", 'TaskController->editTaskSave'); // verify
+$f3->route("POST /tasks/@pid/delete", 'TaskController->deleteTask'); // delete task
 
+// Lists
+$f3->route("GET|POST /lists", 'ListsController->getLists'); // get all lists
+
+// add list
+// verify
+// edit list
+// verify
+// delete list
 
 // Run the framework
 $f3->run();
