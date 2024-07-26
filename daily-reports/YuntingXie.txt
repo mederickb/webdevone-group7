@@ -32,3 +32,14 @@ Day 11 (21/07)
 
 Day 12 (22/07)
 - Try to create LoginModel and loginController but not working
+
+Day 13 (23/07)
+- success to complete the login and logout function
+
+Day 14 (24/07)
+- complete the signup function
+
+Day 15 (25/07)
+- success to complete Contact us part to save info in database
+
+
