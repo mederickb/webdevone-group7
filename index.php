@@ -47,5 +47,9 @@ $f3->route("GET /lists/@pid/edit", 'ListsController->editList'); // edit list
 $f3->route("POST /lists/@pid/edit", 'ListsController->editListSave'); // verify
 $f3->route("POST /lists/@pid/delete", 'ListsController->deleteList'); // delete task
 
+// testing
+$f3->route("GET|POST /lists/drop", 'ListsController->getListsDrop');
+//$f3->route("POST /new", 'ListsController->getListsDrop');
+
 // Run the framework
 $f3->run();

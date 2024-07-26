@@ -28,7 +28,7 @@ class Task extends Model {
     }
 
     /**
-     * Dummy method
+     * Test method
      */
     public function addDummy() {
         $this->list = 1;

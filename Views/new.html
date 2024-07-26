@@ -44,16 +44,12 @@
               <div class="list-dropdown">
                 <label name="lists">Task Category</label>
                 <select name="list_id">
-                    <option value="1">ToDo</option>
-                    <option value="2">Done</option>
-                    <option value="3">Important</option>
+<!--                    <option value="1">ToDo</option>-->
+<!--                    <option value="2">Done</option>-->
+<!--                    <option value="3">Important</option>-->
+                    <include href="{{ @listsdrop }}" />
                 </select>
               </div>
-<!--                Disabling time field for simplicity, will be readded if there's time-->
-<!--              <div class="time-field">-->
-<!--                <label for="due-time">Due Time</label>-->
-<!--                <input type="time" id="due-time" name="due-time" required>-->
-<!--              </div>-->
             </div>
             <input type="submit" class="btn btn-primary btn-lg mt-3" value="AddTask">
         </form>
