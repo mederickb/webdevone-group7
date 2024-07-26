@@ -41,3 +41,8 @@ Day 16 (25/07)
 - Added a function to retrieve incomplete tasks (still rather unsophisticated)
 - Changes to database
 - Add task function (working but incomplete)
+- Started work on documentation
+
+Day 17 (26/07)
+- Finished work on documentation
+- Added contact table to database

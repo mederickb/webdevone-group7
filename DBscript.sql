@@ -60,6 +60,7 @@ CREATE TABLE `task` (
 --
 
 INSERT INTO `task` (`task_id`, `list_id`, `content`, `is_completed`) VALUES
+(1, 1, 'testing', 1),
 (2, 1, 'hello world!', 1),
 (3, 1, 'Take out trash', 1),
 (4, 1, 'Do the dishes', 1),
@@ -84,8 +85,30 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `email`, `password`, `first_name`, `last_name`) VALUES
-(1, 'johnsmith@apple.com', '$2y$10$FDtbhmYw7X713Sc3BH7VOe9l44caKt96WBZetNsRe1LvgD3s/3OVq', 'John', 'Smith'),
-(2, 'rhaenys@driftmark.com', '$2y$10$qrfaaq6g1IVYcZ0USwFkzuEyhAarY2yM5ObIt2Iw3FUFwZt/Itau.', 'Rhaenys', 'Targaryen');
+(1, 'johnsmith@apple.com', '$2y$10$FDtbhmYw7X713Sc3BH7VOe9l44caKt96WBZetNsRe1LvgD3s/3OVq', 'John', 'Smith'), -- 1234
+(2, 'rhaenys@driftmark.com', '$2y$10$qrfaaq6g1IVYcZ0USwFkzuEyhAarY2yM5ObIt2Iw3FUFwZt/Itau.', 'Rhaenys', 'Targaryen'); -- Meleys
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contacts`
+--
+
+CREATE TABLE `contacts` (
+    `id` int NOT NULL,
+    `first_name` varchar(50) NOT NULL,
+    `last_name` varchar(50) NOT NULL,
+    `email` varchar(100) NOT NULL,
+    `comments` text NOT NULL,
+    `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `first_name`, `last_name`, `email`, `comments`, `created_at`) VALUES
+(1, 'yunting', 'xie', 'tintin_xie@outlook.com', 'great!', '2024-07-25 17:54:00');
 
 --
 -- Indexes for dumped tables
@@ -112,6 +135,12 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 
 --
+-- Indexes for table `contacts`
+--
+ALTER TABLE `contacts`
+    ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -119,7 +148,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `list`
 --
 ALTER TABLE `list`
-  MODIFY `list_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `list_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `task`
@@ -131,7 +160,13 @@ ALTER TABLE `task`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
