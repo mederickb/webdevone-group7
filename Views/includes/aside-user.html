@@ -1,0 +1,19 @@
+<!--Aside for pages where user is logged in-->
+<aside class="sidebar">
+	<div class="user-section">
+		<div class="user-icon">
+			<img src="{{ @BASE }}/img/profile.jpg" alt="User Profile">
+		</div>
+		<div class="user-name">
+			<span class="text-login">{{ @SESSION.fullname }}</span><span class="edit-icon"><a href="{{ @BASE }}/profile"><img width="30" height="30" src="https://img.icons8.com/?size=100&id=364&format=png&color=000000" alt="Account Settings"/></a></span>
+			<form action="{{ @BASE }}/logout" method="post">
+				<input type="submit" class="btn btn-primary" value="Logout"></input>
+			</form>
+		</div>
+	</div>
+	<div class="list-task"> <em><a href="">All Tasks</a></em> <span><a href="{{ @BASE }}/new">+</a></span></div>
+	<div>
+		<include href="{{ @listsaside }}" />
+		<div class="list-item"><a href="">+ New List</a></div>
+	</div>
+</aside>

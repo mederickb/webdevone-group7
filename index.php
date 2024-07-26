@@ -10,6 +10,7 @@ $f3->config('config.ini');
 
 // Page routes
 $f3->route('GET /', 'PageController->home');
+$f3->route('GET /all', 'PageController->all');
 $f3->route('GET /profile', 'PageController->profile');
 $f3->route('GET /new', 'PageController->new');
 $f3->route('GET /update', 'PageController->update');

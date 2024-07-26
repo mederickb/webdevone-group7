@@ -1,14 +1,9 @@
-<include href="includes/header.html">
-	<div id="main">
-		<h1>Tasks</h1>
-		<check if="{{@errors}}">
-			<p class='messages'> </p>
-		</check>
+<check if="{{@errors}}">
+	<p class='messages'> </p>
+</check>
 
-		<repeat group="{{@tasks}}" value="{{@item}}">
-			<div class="task">
-				<input type="checkbox"> {{ @item['content'] | nl2br }}
-			</div>
-		</repeat>
+<repeat group="{{@tasks}}" value="{{@item}}">
+	<div class="task">
+		<input type="checkbox"> {{ @item['content'] | nl2br }}
 	</div>
-<include href="includes/footer.html">
+</repeat>

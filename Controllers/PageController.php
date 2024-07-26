@@ -4,12 +4,20 @@ class PageController extends Controller{
         // This method runs before every route in this controller
         $f3->set('header', 'includes/header.html');
         $f3->set('footer', 'includes/footer.html');
+        $f3->set('aside', 'includes/aside-user.html'); // only for pages where user is logged in
         $f3->set('listsdrop', 'tasks/lists-dropdown.html');
+        $f3->set('listsaside', 'tasks/lists-aside.html');
     }
 
     function home($f3) {
         $this->setPageTitle("Home");
         $f3->set('content', 'index.html');
+        echo \Template::instance()->render('template.html');
+    }
+
+    function all($f3) {
+        $this->setPageTitle("All Tasks");
+        $f3->set('content', 'all.html');
         echo \Template::instance()->render('template.html');
     }
 

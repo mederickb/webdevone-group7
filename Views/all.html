@@ -1,0 +1,10 @@
+<!--The list of all the user's tasks-->
+<include href="{{ @aside }}" />
+<div class="task-list">
+	<h2>All Tasks</h2>
+	<repeat group="{{@tasks}}" value="{{@item}}">
+		<div class="task">
+			<input type="checkbox"> {{ @item['content'] | nl2br }}
+		</div>
+	</repeat>
+</div>
