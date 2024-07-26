@@ -32,14 +32,14 @@ class ListsController extends Controller {
 
         $this->f3->set('lists', $lists);
         $this->setPageTitle("User Lists");
-        echo $this->template->render('tasks/lists-dropdown.html');
+        //echo $this->template->render('tasks/lists-dropdown.html');
     }
 
     /**
      * Prepare to create new list
      */
     public function addList() {
-        $data = ['list_id'=>'', 'content'=>'', 'due_date'=>''];
+        $data = ['list_id'=>'', 'content'=>'', 'due_date'=>NULL];
         $this->f3->set('item', $data);
 
         $this->setPageTitle("Create List");

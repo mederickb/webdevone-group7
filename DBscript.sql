@@ -52,7 +52,7 @@ CREATE TABLE `task` (
   `list_id` int NOT NULL,
   `content` varchar(500) COLLATE utf8mb3_unicode_ci NOT NULL,
   `is_completed` tinyint(1) NOT NULL DEFAULT 0,
-  `due_date` date
+  `due_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --

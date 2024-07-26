@@ -22,8 +22,8 @@ class PageController extends Controller{
     function new($f3) {
         $this->setPageTitle("New Task");
         $f3->set('content', 'new.html');
-        //$f3->ListsController()->getListsDrop();
-        //$f3->call(ListsController()->getListsDrop());
+        $lc = new ListsController($f3);
+        $lc->getListsDrop();
         echo \Template::instance()->render('template.html');
     }
 
