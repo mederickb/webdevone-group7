@@ -49,3 +49,4 @@ Day 17 (26/07)
 - Added edit and delete function to tasks
 - Added add, edit, and delete functions to lists
 - Got list selection dropdown working
+- Attempted to get list creation working but did not manage
