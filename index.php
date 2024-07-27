@@ -15,6 +15,7 @@ $f3->route('GET /profile', 'PageController->profile');
 $f3->route('GET /new', 'PageController->new');
 $f3->route('GET /update', 'PageController->update');
 $f3->route('GET /contactus', 'PageController->contactus');
+$f3->route('GET /newlist', 'PageController->newlist');
 
 // Login routes
 $f3->route('GET|POST /login', 'UserController->login');

@@ -1,0 +1,8 @@
+<include href="{{ @aside }}"/>
+<div class="new-task">
+	<h2>New List</h2>
+	<form action="{{ @BASE }}/lists/add" method="POST">
+		<input type="text" class="task-input" name="list_name" placeholder="Enter a list name" required>
+		<input type="submit" class="btn btn-primary btn-lg mt-3" value="Create List">
+	</form>
+</div>

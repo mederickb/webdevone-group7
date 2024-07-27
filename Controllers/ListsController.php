@@ -31,7 +31,7 @@ class ListsController extends Controller {
         $lists = $this->model->fetchLists();
 
         $this->f3->set('lists', $lists);
-        $this->setPageTitle("User Lists");
+        //$this->setPageTitle("User Lists");
         //echo $this->template->render('tasks/lists-dropdown.html');
     }
 
@@ -39,11 +39,12 @@ class ListsController extends Controller {
      * Prepare to create new list
      */
     public function addList() {
-        $data = ['list_id'=>'', 'content'=>'', 'due_date'=>NULL];
+        $test = 1;
+        $data = ['list_id'=>'', 'user_id'=>$test, 'list_name'=>''];
         $this->f3->set('item', $data);
 
         $this->setPageTitle("Create List");
-        echo $this->template->render('new.html'); //TODO: template
+        echo $this->template->render('newlist.html'); //TODO: template
     }
 
     /**
@@ -111,8 +112,9 @@ class ListsController extends Controller {
             $this->f3->set("item", $this->f3->get("POST"));
 
             $this->f3->set("errors", $errors);
-            echo $this->template->render('new.html');
+            echo $this->template->render('newlist.html');
             return false;
         }
+        return true;
     }
 }

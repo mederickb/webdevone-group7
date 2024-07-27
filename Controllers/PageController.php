@@ -46,4 +46,12 @@ class PageController extends Controller{
         $f3->set('content', 'contactus.html');
         echo \Template::instance()->render('template.html');
     }
+
+    function newlist($f3) {
+        $this->setPageTitle("New List");
+        $f3->set('content', 'newlist.html');
+        $lc = new ListsController($f3);
+        $lc->getListsDrop();
+        echo \Template::instance()->render('template.html');
+    }
 }
